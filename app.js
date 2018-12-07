@@ -17,7 +17,9 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/nba_camp", { useNewUrlParser: true });
+
+//mongoose.connect("mongodb://localhost/nba_camp", { useNewUrlParser: true });
+mongoose.connect("mongodb://tony:houston2@ds227322.mlab.com:27322/nba-camp", { useNewUrlParser: true });
 mongoose.set("useCreateIndex", true);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
